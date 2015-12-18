@@ -1,0 +1,20 @@
+<template name="SearchResult">
+   <div id='search-result'>
+    <div id="search-meta">
+      {{#if isLoading}}
+        searching ...
+      {{/if}}
+    </div>
+
+    {{#each getLogs}}
+    <div class="package">
+      <h4 class="name">
+        <a href="{{host}}" target="_blank">{{{host}}}</a>
+      </h4>
+      <div class="description">
+        {{{text}}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</template>

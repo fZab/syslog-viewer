@@ -1,0 +1,22 @@
+<template name="Home">
+  <div class="home">
+  	{{> Actions}}
+    <h3>Latest entries</h3>
+    <table>
+		  <thead>
+		    <tr>
+		      <th>Host</th>
+		      <th>Message</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	{{#each getLogs}}
+					<tr>
+						<td>{{{host}}}</td>
+						<td>{{{text}}}</td>
+					</tr>
+		  	{{/each}}
+	  	</tbody>
+		</table>
+  </div>
+</template>
